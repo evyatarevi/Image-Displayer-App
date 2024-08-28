@@ -1,6 +1,7 @@
 body {
   background-color: #f9f9f9;
 }
+
 /* Card styling */
 .image-list-container {
   display: flex;
@@ -35,7 +36,7 @@ body {
 
 .card-content h3 {
   margin: 0 0 10px;
-  font-size: 18px;
+  font-size: 12px;
 }
 
 .card-content p {
@@ -81,4 +82,102 @@ body {
 
 .search-box button:hover {
   background-color: #555;
+}
+/* image modal */
+/* modal-background */
+.modal-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal container */
+.image-modal {
+  display: block;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal content */
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  position: relative;
+}
+
+/* Close button */
+.close-button {
+  position: absolute;
+  top: -7px;
+  right: 4px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  /* color: #ff3b30; */
+  cursor: pointer;
+}
+
+/* Image */
+.modal-image {
+  width: 100%;
+  height: 350px;
+  border-radius: 8px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Info section */
+.modal-info {
+  margin-top: 15px;
+  text-align: center;
+}
+
+/* Photographer link */
+.modal-photographer {
+  margin-top: 5px;
+}
+
+.modal-photographer a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.modal-photographer a:hover {
+  text-decoration: underline;
+}
+
+/* Visit Website link */
+.modal-url {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.modal-url:hover {
+  background-color: #0056b3;
 }
