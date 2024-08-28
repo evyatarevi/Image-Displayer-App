@@ -16,9 +16,5 @@ export const handleImageList = () => __awaiter(void 0, void 0, void 0, function*
     //   need to handle error
     const imageList = createImageList(photos);
     const homeContainer = document.querySelector(".home-container");
-    if (homeContainer) {
-        console.log("object");
-        homeContainer.appendChild(imageList);
-        console.log("object2");
-    }
+    homeContainer === null || homeContainer === void 0 ? void 0 : homeContainer.appendChild(imageList);
 });

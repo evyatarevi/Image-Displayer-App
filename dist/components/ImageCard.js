@@ -1,6 +1,9 @@
-export const createImageCard = ({ id, alt, src, }) => {
+import { handleModal } from "../services/handleModal.js";
+export const createImageCard = ({ id, alt, src, url, photographer, photographer_url, }) => {
+    const imageDetails = { id, alt, src, url, photographer, photographer_url };
     const card = document.createElement("div");
     card.classList.add("card");
+    card.addEventListener("click", handleModal(imageDetails));
     const image = document.createElement("img");
     image.src = src.original;
     image.alt = alt;

@@ -57,5 +57,5 @@ body {
 /* Ensure that all elements can use the full width and height of their containers */
 html,
 body {
-  height: 100%;
+  /* height: 100%; */
 }

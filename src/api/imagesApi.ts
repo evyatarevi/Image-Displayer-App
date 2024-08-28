@@ -1,20 +1,3 @@
-// export const getImagesByName = async (name: string) => {
-// try {
-//   const response = await fetch(
-//     "https://pixabay.com/api/?key=&q=yellow+flowers&image_type=photo&pretty=true"
-//   );
-//   if (!response.ok) {
-//     throw new Error("Network response was not ok");
-//   }
-//   const data = await response.json();
-//   return data;
-// } catch (error) {
-//   // return error.message;
-//   return error;
-// }
-
-// };
-
 const API_KEY = "7H6pe5R2J7xQoZFcdw8FJQJ5qFfxjOQ0C9N2snxKqWODMiRdUb0B3dmP"; // Replace with your Pexels API key
 const API_URL = "https://api.pexels.com/v1/search"; // Pexels API endpoint
 
@@ -32,7 +15,6 @@ export const fetchPhotos = async (query: string) => {
     }
 
     const data = await response.json();
-    console.log("api happen");
     return data.photos; // This will contain the array of photos
   } catch (error) {
     console.error("Error fetching photos:", error);
