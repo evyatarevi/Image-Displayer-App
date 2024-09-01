@@ -1,4 +1,4 @@
-import { createHomePage } from "../views/HomePage.js";
+import { createHomePage } from "../pages/HomePage.js";
 
 export const setupRouter = () => {
   window.addEventListener("load", createHomePage);
