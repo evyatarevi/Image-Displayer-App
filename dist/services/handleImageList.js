@@ -9,12 +9,17 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 import { fetchPhotos } from "../api/imagesApi.js";
 import { createImageList } from "../components/ImageList.js";
+import { createMoreImagesBtn } from "../components/MoreImagesBtn.js";
 export const handleImageList = () => __awaiter(void 0, void 0, void 0, function* () {
     var _a;
     const inputValue = (_a = document.querySelector(".user-input-search")) === null || _a === void 0 ? void 0 : _a.value;
     const photos = yield fetchPhotos(inputValue);
     //   need to handle error
     const imageList = createImageList(photos);
+    const moreImagesBtn = createMoreImagesBtn(photos, imageList);
+    const previousImageList = document.querySelector(".image-list-container");
+    previousImageList === null || previousImageList === void 0 ? void 0 : previousImageList.remove();
     const homeContainer = document.querySelector(".home-container");
     homeContainer === null || homeContainer === void 0 ? void 0 : homeContainer.appendChild(imageList);
+    homeContainer === null || homeContainer === void 0 ? void 0 : homeContainer.appendChild(moreImagesBtn);
 });
