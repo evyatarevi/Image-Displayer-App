@@ -1,18 +1,9 @@
 import { createImageModal } from "../components/ImageModal.js";
+import { type PhotoType } from "../types/photoType.js";
 
-interface ImageDetails {
-  id: string;
-  alt: string;
-  src: { original: string };
-  url: string;
-  photographer: string;
-  photographer_url: string;
-}
-
-export const handleModal = (imageDetails: ImageDetails) => {
+export const handleModal = (photo: PhotoType): (() => void) => {
   return () => {
-    const modal = createImageModal(imageDetails);
-    if (modal) console.log("modal", modal);
+    const modal = createImageModal(photo);
     document.getElementById("app")?.appendChild(modal);
   };
 };

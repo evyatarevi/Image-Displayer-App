@@ -1,18 +1,17 @@
 import { handleModal } from "../services/handleModal.js";
-export const createImageCard = ({ id, alt, src, url, photographer, photographer_url, }) => {
-    const imageDetails = { id, alt, src, url, photographer, photographer_url };
+export const createImageCard = (photo) => {
     const card = document.createElement("div");
     card.classList.add("card");
-    card.addEventListener("click", handleModal(imageDetails));
+    card.addEventListener("click", handleModal(photo));
     const image = document.createElement("img");
-    image.src = src.original;
-    image.alt = alt;
+    image.src = photo.src.original;
+    image.alt = photo.alt;
     const content = document.createElement("div");
     content.classList.add("card-content");
     const idElement = document.createElement("h3");
-    idElement.textContent = id;
+    idElement.textContent = photo.id;
     const decElement = document.createElement("p");
-    decElement.textContent = alt;
+    decElement.textContent = photo.alt;
     content.appendChild(idElement);
     content.appendChild(decElement);
     card.appendChild(image);

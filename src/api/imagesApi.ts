@@ -1,7 +1,6 @@
-const API_KEY = "7H6pe5R2J7xQoZFcdw8FJQJ5qFfxjOQ0C9N2snxKqWODMiRdUb0B3dmP"; // Replace with your Pexels API key
-const API_URL = "https://api.pexels.com/v1/search"; // Pexels API endpoint
+const API_KEY = "7H6pe5R2J7xQoZFcdw8FJQJ5qFfxjOQ0C9N2snxKqWODMiRdUb0B3dmP";
+const API_URL = "https://api.pexels.com/v1/search";
 
-// Function to fetch photos based on a search query
 export const fetchPhotos = async (query: string) => {
   try {
     const response = await fetch(`${API_URL}?query=${query}&per_page=10`, {
@@ -15,13 +14,8 @@ export const fetchPhotos = async (query: string) => {
     }
 
     const data = await response.json();
-    return data.photos; // This will contain the array of photos
+    return data.photos;
   } catch (error) {
     console.error("Error fetching photos:", error);
   }
 };
-
-// Example usage
-// fetchPhotos("nature").then((photos) => {
-//   console.log(photos);
-// });

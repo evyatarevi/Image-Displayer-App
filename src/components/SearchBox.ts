@@ -1,6 +1,6 @@
 import { handleImageList } from "../services/handleImageList.js";
 
-export const createSearchBox = () => {
+export const createSearchBox = (): HTMLElement => {
   const searchBox = document.createElement("section");
   searchBox.classList.add("search-box");
 

@@ -8,7 +8,8 @@
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
     "outDir": "./dist",
-    "rootDir": "./src"
+    "rootDir": "./src",
+    "lib": ["dom", "esnext"]
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules"]
